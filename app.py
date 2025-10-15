@@ -1,0 +1,19 @@
+#app.py
+from flask import Flask
+app = Flask(__name__)
+@app.route('/hello', methods=['GET'])
+def hello():
+    return '''
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rem, architecto laboriosam accusamus hic blanditiis repellat, voluptatum beatae molestiae pariatur temporibus accusantium dolorum illum nesciunt! Nesciunt voluptates voluptatem esse cumque.</p>
+</body>
+</html>'''
+if __name__ == '__main__':
+    app.run(debug=True)
